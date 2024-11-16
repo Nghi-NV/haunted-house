@@ -1,9 +1,13 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
+import { GUI } from 'dat.gui';
 import { Sky } from 'three/addons/objects/Sky.js'
 
-const gui = new GUI();
+const gui = new GUI({
+  closed: true,
+  name: 'Haunted House',
+  preset: 'Haunted House',
+});
 
 const canvas = document.querySelector('#webgl');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
